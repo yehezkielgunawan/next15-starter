@@ -1,13 +1,10 @@
 "use client"
-import { useEffect, useState } from "react";
+import useIsDark from "@/hooks/useIsDark";
+import { } from "react";
 import { IoMoon, IoSunny } from "react-icons/io5";
 
 const Header = () => {
-  const [isDark, setIsDark] = useState<boolean>(false);
-
-  useEffect(() => {
-    localStorage.setItem("isDark", JSON.stringify(isDark));
-  } , [isDark]);
+  const { setIsDark} = useIsDark()
 
   return (
     <header className="bg-base-200">
@@ -39,8 +36,8 @@ const Header = () => {
                   onChange={(e) => setIsDark(e.target.checked)}
                 />
 
-                <IoSunny className="swap-off h-4 w-4" />
-                <IoMoon className="swap-on h-4 w-4" />
+                <IoSunny className="swap-off h-5 w-5" />
+                <IoMoon className="swap-on h-5 w-5" />
               </label>
             </li>
           </ul>
