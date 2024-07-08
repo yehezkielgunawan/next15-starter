@@ -1,6 +1,14 @@
+"use client"
+import { useEffect, useState } from "react";
 import { IoMoon, IoSunny } from "react-icons/io5";
 
 const Header = () => {
+  const [isDark, setIsDark] = useState<boolean>(false);
+
+  useEffect(() => {
+    localStorage.setItem("isDark", JSON.stringify(isDark));
+  } , [isDark]);
+
   return (
     <header className="bg-base-200">
       <nav className="navbar mx-auto max-w-4xl px-2 md:px-0">
@@ -28,6 +36,7 @@ const Header = () => {
                   type="checkbox"
                   className="theme-controller"
                   value="dim"
+                  onChange={(e) => setIsDark(e.target.checked)}
                 />
 
                 <IoSunny className="swap-off h-4 w-4" />
