@@ -4,6 +4,6 @@
 
 @layer base {
   main {
-    @apply max-w-4xl mx-auto px-2 md:px-0 mt-8;
+    @apply container mx-auto mt-8;
   }
 }
