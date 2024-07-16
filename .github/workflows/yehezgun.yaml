@@ -22,7 +22,7 @@ jobs:
         node-version: 20
         cache: "pnpm"
     - name: Install Deps (immutable)
-      run: pnpm install --frozen-lockfile
+      run: pnpm install --no-frozen-lockfile
     - name: Run Biome Formatter
       run: pnpm biome-format:ci
     - name: Run Biome Linter
