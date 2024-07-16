@@ -6,9 +6,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"biome-format": "biome format --write src/",
-		"biome-format:ci": "biome format --check src/",
-		"biome-lint:ci": "biome lint src/"
+		"biome-format": "biome format --write src/"
 	},
 	"dependencies": {
 		"next": "14.2.4",
