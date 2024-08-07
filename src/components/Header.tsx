@@ -1,16 +1,12 @@
 "use client";
+import useIsClient from "@/hooks/useIsClient";
 import { useTheme } from "next-themes";
-import { useSyncExternalStore } from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoMoon, IoSunny } from "react-icons/io5";
 
 const Header = () => {
 	const { setTheme, theme } = useTheme();
-	const isClient = useSyncExternalStore(
-		() => () => {},
-		() => true,
-		() => false,
-	);
+	const isClient = useIsClient();
 
 	return (
 		<header className="bg-base-200">
