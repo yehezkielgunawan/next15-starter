@@ -10,7 +10,7 @@ const Header = () => {
 
 	return (
 		<header className="bg-base-200">
-			<nav className="container mx-auto">
+			<nav className="container mx-auto lg:max-w-5xl">
 				<div className="navbar px-0">
 					<div className="flex-1">
 						<a href="/">NextJS 14 Template</a>
