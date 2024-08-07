@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { ThemeProvider } from "@/context/ThemeProvider";
 
 const inter = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -19,9 +20,15 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${inter.className}`}>
-				<Header />
-				{children}
-				<Footer />
+				<ThemeProvider
+					defaultTheme="system"
+					enableSystem
+					themes={["nord", "dim"]}
+				>
+					<Header />
+					{children}
+					<Footer />
+				</ThemeProvider>
 			</body>
 		</html>
 	);
