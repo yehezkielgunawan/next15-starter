@@ -1,14 +1,16 @@
+import Link from "next/link";
+
 const Footer = () => {
 	return (
-		<footer className="container mx-auto mt-16 text-center">
-			<a
+		<footer className="footer footer-center container mx-auto my-12 gap-6 lg:max-w-5xl">
+			<Link
 				href="https://yehezgun.com"
 				target="_blank"
 				className="link link-hover"
 				rel="noreferrer"
 			>
 				© {new Date().getFullYear()} | Yehezgun
-			</a>
+			</Link>
 		</footer>
 	);
 };

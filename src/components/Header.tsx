@@ -1,14 +1,16 @@
 "use client";
-import useIsDark from "@/hooks/useIsDark";
+import useIsClient from "@/hooks/useIsClient";
+import { useTheme } from "next-themes";
 import { FaGithub } from "react-icons/fa";
 import { IoMoon, IoSunny } from "react-icons/io5";
 
 const Header = () => {
-	const { setIsDark } = useIsDark();
+	const { setTheme, theme } = useTheme();
+	const isClient = useIsClient();
 
 	return (
 		<header className="bg-base-200">
-			<nav className="container mx-auto">
+			<nav className="container mx-auto lg:max-w-5xl">
 				<div className="navbar px-0">
 					<div className="flex-1">
 						<a href="/">NextJS 14 Template</a>
@@ -26,17 +28,24 @@ const Header = () => {
 								</a>
 							</li>
 							<li>
-								<label className="swap swap-rotate btn btn-ghost btn-sm">
-									<input
-										type="checkbox"
-										className="theme-controller"
-										value="dim"
-										onChange={(e) => setIsDark(e.target.checked)}
-									/>
+								{isClient ? (
+									<label className="swap swap-rotate btn btn-ghost btn-sm">
+										<input
+											checked={theme === "dim"}
+											type="checkbox"
+											className="theme-controller"
+											value="dim"
+											onChange={(e) =>
+												setTheme(e.target.checked ? "dim" : "nord")
+											}
+										/>
 
-									<IoSunny size={20} className="swap-off" />
-									<IoMoon size={20} className="swap-on" />
-								</label>
+										<IoSunny size={20} className="swap-off" />
+										<IoMoon size={20} className="swap-on" />
+									</label>
+								) : (
+									<div className="skeleton h-[34px] w-[50px] md:h-8" />
+								)}
 							</li>
 						</ul>
 					</div>
