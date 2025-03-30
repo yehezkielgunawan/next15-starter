@@ -28,5 +28,7 @@ jobs:
         version: latest
     - name: Run Biome
       run: pnpm biome:lint:ci
+    - name: Unit Test
+      run: pnpm test:ci
     - name: Build
       run: pnpm build
