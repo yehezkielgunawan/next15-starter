@@ -6,8 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"biome-format": "biome format --write src/",
-		"biome-lint": "biome lint src/",
+		"biome:format": "biome format --write src/",
+		"biome:lint": "biome lint --write src/",
 		"up-latest": "pnpm up --latest"
 	},
 	"dependencies": {
