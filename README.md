@@ -1,6 +1,6 @@
-# Personalized Next JS 14 Template (using App Dir)
+# Personalized Next JS 15 Template (using App Dir)
 
-This is my personalized Next JS 14 template (using app dir).
+This is my personalized Next JS 15 template (using app dir).
 
 ## Features
 
