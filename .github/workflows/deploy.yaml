@@ -20,6 +20,9 @@ jobs:
         with:
           node-version: 20
           cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm build
-      - run: pnpm sst:deploy
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Build Project
+        run: pnpm build
+      - name: Deploy to SST
+        run: pnpm sst:deploy
