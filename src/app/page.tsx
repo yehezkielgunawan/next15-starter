@@ -10,7 +10,7 @@ export default function Home() {
 			</code>
 			<div className="mt-12 flex w-full items-center justify-center">
 				<a
-					href="https://github.com/new?template_name=next14-starter&template_owner=yehezkielgunawan"
+					href="https://github.com/new?template_name=next15-starter&template_owner=yehezkielgunawan"
 					target="_blank"
 					className="btn"
 					rel="noreferrer"
